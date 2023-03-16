@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<link rel="stylesheet" href="css.css">
+<script src="js.js"></script>
+<body>
+
+    <div ng-app="myapp1" ng-controller="cntryController">
+        I have {{friends.length}} friends. They are:
+            <input type="search" ng-model="q" placeholder="filter friends..." aria-label="filter friends" />
+            <div class="wrapper">
+            <div ng-repeat="friend in friends | filter:q">
+                [{{$index + 1}}] {{friend.name}} who is {{friend.age}} years old.
+            </div>
+            </div>
+        
+        </div>
+
+</body>
+</html>
